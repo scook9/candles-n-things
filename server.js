@@ -5,7 +5,8 @@ const hbs = exphbs.create({});
 
 const path = require("path");
 const sequelize = require("./config/connections");
-
+//initialize the Products table
+const Products = require("./models/Products");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -18,6 +19,9 @@ app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+//connect to db and server
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
 });
