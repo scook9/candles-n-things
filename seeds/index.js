@@ -1,18 +1,13 @@
 const sequelize = require("../config/connections");
-const { Candle, Soap } = require("../models/index");
+const { Products } = require("../models/index");
 
-const soapData = require("./soapData.json");
-const candleData = require("./candleData.json");
+const productsData = require("./productsData.json");
 
 const seedDatabase = async () => {
   try {
     await sequelize.sync({ force: true });
 
-    await Soap.bulkCreate(soapData);
-    console.log("soaps seeded successfully");
-
-    await Candle.bulkCreate(candleData);
-    console.log("candles seeded successfully");
+    await Products.bulkCreate(productsData);
 
     console.log("data seeded successfuly!");
     process.exit(0);

@@ -1,4 +1,3 @@
-const Candle = require("./Candle");
-const Soap = require("./Soap");
+const Products = require("./Products");
 
-module.exports = { Candle, Soap };
+module.exports = { Products };

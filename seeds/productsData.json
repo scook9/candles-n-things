@@ -1,74 +1,116 @@
 [
   {
+    "type": "candle",
     "scent": "Baja",
     "size": "small yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Gin & Cypress",
     "size": "small yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Mango",
     "size": "small yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Starfruit",
     "size": "small yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Yuxu & Hinoki",
     "size": "small yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Earl Grey",
     "size": "small yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Fresh cut apple",
     "size": "small yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Agave",
     "size": "small yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Pear",
     "size": "small yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Baja",
     "size": "large yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Gin & Cypress",
     "size": "large yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Mango",
     "size": "large yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Starfruit",
     "size": "large yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Yuxu & Hinoki",
     "size": "large yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Earl Grey",
     "size": "large yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Fresh cut apple",
     "size": "large yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Agave",
     "size": "large yogurt container"
   },
   {
+    "type": "candle",
     "scent": "Pear",
     "size": "large yogurt container"
+  },
+  {
+    "type": "soap",
+    "scent": "pear"
+  },
+  {
+    "type": "soap",
+    "scent": "Mango"
+  },
+  {
+    "type": "soap",
+    "scent": "Starfruit"
+  },
+  {
+    "type": "soap",
+    "scent": "Gin & cypress"
+  },
+  {
+    "type": "soap",
+    "scent": "Starfruit"
+  },
+  {
+    "type": "soap",
+    "scent": "Agave"
   }
 ]
