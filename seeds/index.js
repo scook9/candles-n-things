@@ -1,5 +1,5 @@
 const sequelize = require("../config/connections");
-const { Candle, Soap } = require("../models");
+const { Candle, Soap } = require("../models/index");
 
 const soapData = require("./soapData.json");
 const candleData = require("./candleData.json");
@@ -16,7 +16,6 @@ const seedDatabase = async () => {
 
     console.log("data seeded successfuly!");
     process.exit(0);
-
   } catch (error) {
     console.error("error seeding database", error);
     process.exit(1);
