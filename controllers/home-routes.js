@@ -1,5 +1,4 @@
 const router = require("express").Router();
-const { Candle, Soap } = require("../models");
 
 // route to get home page
 //http://localhost:3001/
@@ -16,7 +15,7 @@ router.get("/", async (req, res) => {
 router.get("/homepage", async (req, res) => {
   try {
     //send to homepage later, all currently
-    res.status(200).render("homePage");
+    res.status(200).render("homepage");
   } catch (err) {
     res.status(500).json(err);
   }
