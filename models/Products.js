@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connections");
 
-class Soap extends Model {}
+class Products extends Model {}
 
-Soap.init(
+Products.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,16 +11,24 @@ Soap.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     scent: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    size: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
   },
   {
     sequelize,
-    modelName: "soap",
+    modelName: "products",
     freezeTableName: true,
   }
 );
 
-module.exports = Soap;
+module.exports = Products;
