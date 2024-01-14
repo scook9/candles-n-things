@@ -13,8 +13,15 @@ router.get("/", async (req, res) => {
   }
 });
 
-//route to shop page
-
+// route to get shop page
+//http://localhost:3001/shop
+router.get("/shop", async (req, res) => {
+  try {
+    res.status(200).render('homepage', {layout : 'shop'});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 
