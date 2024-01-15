@@ -11,7 +11,7 @@ body {
   justify-content: center;
 }
 #categories-bar {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .site-footer {
@@ -132,4 +132,8 @@ body {
 }
 .social-icons a.dribbble:hover {
   background-color: #ea4c89;
+}
+
+.hide {
+  display: none;
 }
