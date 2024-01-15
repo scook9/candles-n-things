@@ -1,3 +1,7 @@
 .bg-primary {
     background-color: #178000;
 }
+
+.hide {
+    display: none;
+}
