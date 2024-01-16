@@ -6,7 +6,7 @@ const showSoaps = document.getElementById("showSoaps");
 const showScrubs = document.getElementById("showScrubs");
 const candles = document.getElementsByClassName("candle");
 const soaps = document.getElementsByClassName("soap");
-const scrubs = document.getElementsByClassName("scrubs");
+const scrubs = document.getElementsByClassName("scrub");
 const candleHeader = document.getElementById("candleHeader");
 const soapHeader = document.getElementById("soapHeader");
 const scrubHeader = document.getElementById("scrubHeader");
@@ -32,7 +32,7 @@ function showAllFunc() {
   for (let i = 0; i < candles.length; i++) {
     candles[i].classList.remove("hide");
   }
-  for (let i = 0; i < candles.length; i++) {
+  for (let i = 0; i < soaps.length; i++) {
     soaps[i].classList.remove("hide");
   }
   for (let i = 0; i < scrubs.length; i++) {
@@ -52,7 +52,7 @@ function showCandlesFunc() {
   for (let i = 0; i < candles.length; i++) {
     candles[i].classList.remove("hide");
   }
-  for (let i = 0; i < candles.length; i++) {
+  for (let i = 0; i < soaps.length; i++) {
     soaps[i].classList.add("hide");
   }
   for (let i = 0; i < scrubs.length; i++) {
@@ -72,7 +72,7 @@ function showSoapsFunc() {
   for (let i = 0; i < candles.length; i++) {
     candles[i].classList.add("hide");
   }
-  for (let i = 0; i < candles.length; i++) {
+  for (let i = 0; i < soaps.length; i++) {
     soaps[i].classList.remove("hide");
   }
   for (let i = 0; i < scrubs.length; i++) {
@@ -92,7 +92,7 @@ function showScrubsFunc() {
   for (let i = 0; i < candles.length; i++) {
     candles[i].classList.add("hide");
   }
-  for (let i = 0; i < candles.length; i++) {
+  for (let i = 0; i < soaps.length; i++) {
     soaps[i].classList.add("hide");
   }
   for (let i = 0; i < scrubs.length; i++) {
