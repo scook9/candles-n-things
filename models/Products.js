@@ -23,6 +23,10 @@ Products.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    price: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     sequelize,
