@@ -6,7 +6,7 @@ const showSoaps = document.getElementById("showSoaps");
 const showScrubs = document.getElementById("showScrubs");
 const candles = document.getElementsByClassName("candle");
 const soaps = document.getElementsByClassName("soap");
-const scrubs = document.getElementsByClassName("scrubs");
+const scrubs = document.getElementsByClassName("scrub");
 const candleHeader = document.getElementById("candleHeader");
 const soapHeader = document.getElementById("soapHeader");
 const scrubHeader = document.getElementById("scrubHeader");
@@ -20,6 +20,8 @@ showCandles.addEventListener("click", showCandlesFunc);
 showSoaps.addEventListener("click", showSoapsFunc);
 showScrubs.addEventListener("click", showScrubsFunc);
 
+// function to show all products. removes hide class from all descriptions and disclaimers, then removes hide from all products
+
 function showAllFunc() {
   console.log("reached show all function");
 
@@ -32,13 +34,15 @@ function showAllFunc() {
   for (let i = 0; i < candles.length; i++) {
     candles[i].classList.remove("hide");
   }
-  for (let i = 0; i < candles.length; i++) {
+  for (let i = 0; i < soaps.length; i++) {
     soaps[i].classList.remove("hide");
   }
   for (let i = 0; i < scrubs.length; i++) {
     scrubs[i].classList.remove("hide");
   }
 }
+
+// function to remove hide from all candles and the candles description/disclaimer. Adds hide class to everything else
 
 function showCandlesFunc() {
   console.log("reached show all Candles function");
@@ -52,13 +56,15 @@ function showCandlesFunc() {
   for (let i = 0; i < candles.length; i++) {
     candles[i].classList.remove("hide");
   }
-  for (let i = 0; i < candles.length; i++) {
+  for (let i = 0; i < soaps.length; i++) {
     soaps[i].classList.add("hide");
   }
   for (let i = 0; i < scrubs.length; i++) {
     scrubs[i].classList.add("hide");
   }
 }
+
+// function to remove hide from all soaps and the soaps description/disclaimer. Adds hide class to everything else
 
 function showSoapsFunc() {
   console.log("reached show all Soaps function");
@@ -72,13 +78,15 @@ function showSoapsFunc() {
   for (let i = 0; i < candles.length; i++) {
     candles[i].classList.add("hide");
   }
-  for (let i = 0; i < candles.length; i++) {
+  for (let i = 0; i < soaps.length; i++) {
     soaps[i].classList.remove("hide");
   }
   for (let i = 0; i < scrubs.length; i++) {
     scrubs[i].classList.add("hide");
   }
 }
+
+// function to remove hide from all scrubs and the scrubs description. Adds hide class to everything else
 
 function showScrubsFunc() {
   console.log("reached show all Scrubs function");
@@ -92,7 +100,7 @@ function showScrubsFunc() {
   for (let i = 0; i < candles.length; i++) {
     candles[i].classList.add("hide");
   }
-  for (let i = 0; i < candles.length; i++) {
+  for (let i = 0; i < soaps.length; i++) {
     soaps[i].classList.add("hide");
   }
   for (let i = 0; i < scrubs.length; i++) {
