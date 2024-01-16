@@ -27,13 +27,13 @@ router.get("/shop", async (req, res) => {
       productList.get({ plain: true })
     );
     console.log(products);
-    res.render('shop')
+    res.render('shop', {products})
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
-//{products}//
+
 //route to get cart page
 router.get("/cart", async (req, res) => {
   try {
