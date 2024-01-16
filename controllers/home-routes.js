@@ -9,7 +9,7 @@ console.log(Products);
 router.get("/", async (req, res) => {
   try {
     //send to homepage later, all currently
-    res.status(200).render("homepage", {layout: "all"} );
+    res.status(200).render("homepage");
   } catch (err) {
     res.status(500).json(err);
   }
@@ -27,19 +27,17 @@ router.get("/shop", async (req, res) => {
       productList.get({ plain: true })
     );
     console.log(products);
-
-    res.render('shop', {layout: "all", products})
+    res.render('shop')
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
-
+//{products}//
 //route to get cart page
 router.get("/cart", async (req, res) => {
   try {
-
-    res.status(200).render("cart", {layout: "all"} );
+    res.status(200).render("cart");
   } catch (err) {
     res.status(500).json(err);
   }
