@@ -12,9 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Default to Handlebars
-app.engine("handlebars", exphbs({
-  layoutsDir: __dirname + '/views/layouts',
-  }));
+app.engine("handlebars", exphbs({}));
 app.set("view engine", "handlebars");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
