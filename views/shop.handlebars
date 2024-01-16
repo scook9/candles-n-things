@@ -4,6 +4,33 @@
     <button id="showAll">View all products</button>
     <button id="showCandles">View all candles</button>
     <button id="showSoaps">View all soaps</button>
+    <section id="candleHeader" class="hide">
+      <h2>100% Clean Burning Soy Wax Candles:</h2>
+      <p>Indulge the senses with luscious, clean burning candles. These
+        delicious candles contain 100% organic soy wax with premium grade
+        phthalate-free, carcinogen-free and toxin-free fragrance oils, and an
+        eco wick that is lead and zinc free, which allows for a clean burn. Each
+        candle is hand poured. The 7 oz candle will burn for 70+ hours and the
+        3.5 candle will burn for 40+ hours.</p>
+      <p>The lovely yogurt jar can be re-used in the kitchen, being both food
+        safe & microwave safe. The soft illumination of the candlelight aids in
+        the relaxation of the body, helping how we feel emotionally and
+        physically.</p>
+    </section>
+    <section id="soapHeader" class="hide">
+      <h2>Organic Gentle Goat Milk Soaps 2 oz disk:</h2>
+      <p>Nourish your skin and indulge your senses with lavish goat milk soap.
+        This pure, organic goat milk soap is naturally high in vitamins
+        (including nourishing vitamin E), minerals, and healthy fats. This
+        creamy soap is vegetable based and has numerous skin benefits, including
+        exceptional moisturizing properties, absorption capacity, and
+        exfoliating power through alpha-hydroxy acids. Each soap is hand crafted
+        and completely free of parabens, phthalates, carcinogens and is non
+        toxic and suitable for all skin types including the most sensitive
+      </p>
+      <p>These beauties are packed with scent. Perfect for travel, gifting,
+        treating yourself and everyday use.</p>
+    </section>
     <section class="products">
       <ul>Available Products
         {{#each products as |product|}}
@@ -11,3 +38,20 @@
         {{/each}}
       </ul>
     </section>
+    <section id="candleDisclaimer" class="hide">
+      <h2>Candle Safety Disclaimer & Care</h2>
+      <p>Disclaimer: Not intended for children. Never leave a candle burning
+        unattended. Always keep items away from the flame. Please use care and
+        precautions when using candles. Burn at your own risk. It is recommended
+        to place a lit candle on a heat resistant coaster/surface to prevent any
+        possibility of heat damage. Star Ray Design assumes no responsibility
+        for any damage that may occur due to misuse of candles, and candle
+        burning. Burn for 3-5 hour intervals.</p>
+    </section>
+    <section id="soapDisclaimer" class="hide">
+      <h2>Soap Safety Disclaimer</h2>
+      <p>Disclaimer: weight may vary slightly from bar to bar. Please avoid
+        eyes. Do not ingest. Discontinue use if irritation occurs. For external
+        use only. If allergic discontinue use.</p>
+    </section>
+    <script src="./js/shop.js"></script>

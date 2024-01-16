@@ -17,16 +17,16 @@ router.get("/", async (req, res) => {
 
 // route to get shop page
 //http://localhost:3001/shop
-router.get("/shop", async (req, res) => {
-  try {
-    const dbProductData = await Products.findAll();
-    if (!dbProductData) {
-      return res.status(404).json({ message: "Products not found" });
-    }
-    const products = dbProductData.map((productList) =>
-      productList.get({ plain: true })
-    );
-    console.log(products);
+// router.get("/shop", async (req, res) => {
+//   try {
+//     const dbProductData = await Products.findAll();
+//     if (!dbProductData) {
+//       return res.status(404).json({ message: "Products not found" });
+//     }
+//     const products = dbProductData.map((productList) =>
+//       productList.get({ plain: true })
+//     );
+//     console.log(products);
 
     res.render('shop', {layout: "all", products})
   } catch (err) {
