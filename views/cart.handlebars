@@ -1,0 +1,14 @@
+<div>
+    {{#each products as |product|}}
+        <div class="col-md-4">
+            <div class="card {{product.type}}" style="width: 18rem">
+                <img src="{{product.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">{{product.scent}} - {{product.size}}</p>
+                    <p>${{product.price}}</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
