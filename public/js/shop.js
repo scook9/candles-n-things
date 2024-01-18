@@ -107,3 +107,5 @@ function showScrubsFunc() {
     scrubs[i].classList.remove("hide");
   }
 }
+
+// function to
