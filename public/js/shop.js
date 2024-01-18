@@ -19,6 +19,7 @@ const cartAdd = document.querySelector("#cartAdd");
 
 const buttonListEl = document.querySelector(".products");
 
+let cartId;
 // Event listeners
 
 showAll.addEventListener("click", showAllFunc);
@@ -29,10 +30,10 @@ showScrubs.addEventListener("click", showScrubsFunc);
 buttonListEl.addEventListener("click", function (event) {
   // get letter from clicked letter button's `data-letter` attribute and use it for display
   // console.log($(event.target).attr("data-id"));
-  var cartId = $(event.target).attr("data-id");
-  console.log(cartId);
+  cartId = $(event.target).attr("data-id");
 
   // console.log(event.target);
+  console.log(cartId);
 });
 
 // function to show all products. removes hide class from all descriptions and disclaimers, then removes hide from all products
@@ -124,3 +125,4 @@ function showScrubsFunc() {
 }
 
 // function to
+module.exports = cartId;
