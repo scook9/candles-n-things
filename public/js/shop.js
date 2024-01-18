@@ -28,17 +28,15 @@ showSoaps.addEventListener("click", showSoapsFunc);
 showScrubs.addEventListener("click", showScrubsFunc);
 
 buttonListEl.addEventListener("click", function (event) {
-  // get letter from clicked letter button's `data-letter` attribute and use it for display
-  // console.log($(event.target).attr("data-id"));
+  event.preventDefault();
   cartId = $(event.target).attr("data-id");
-  const productName = $(event.target).attr("data-name");
-  const productPrice = $(event.target).attr("data-price");
-  addToCart(productId, productName, productPrice);
-  });
-
-  // console.log(event.target);
   console.log(cartId);
+  localStorage.setItem(cartId, "");
 
+  // addToCart(productId, productName, productPrice);
+});
+
+// console.log(event.target);
 
 // function to show all products. removes hide class from all descriptions and disclaimers, then removes hide from all products
 
@@ -127,11 +125,3 @@ function showScrubsFunc() {
     scrubs[i].classList.remove("hide");
   }
 }
-
-
-
-
-
-
-module.exports = cartId;
-
