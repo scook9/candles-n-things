@@ -7,6 +7,7 @@ const { Products } = require("../../models");
 
 // route to get shop page
 //http://localhost:3001/shop
+
 router.get("/", async (req, res) => {
   try {
     const dbProductData = await Products.findAll();
@@ -18,11 +19,12 @@ router.get("/", async (req, res) => {
     );
     
 
-    res.render("homepage", { layout: "shop", products });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
+
+//     res.render("homepage", { layout: "shop", products });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;
