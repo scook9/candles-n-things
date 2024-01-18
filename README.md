@@ -5,6 +5,7 @@ MVP TODO:
 -event listeners connecting to routes for navigation from the home page & event listeners connecting the "shop all", "candles", "soaps", "salt scrubs" links on the home page
 -add to cart buttons w/event listeners on items in shop page
 -express session and cookies
+-professional read me
 
 
 
