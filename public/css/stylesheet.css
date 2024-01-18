@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -10,6 +11,30 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.bloc-logo {
+  position: relative;
+  width: 140px;
+  height: 49px;
+  float: left;
+}
+
+.bloc-logo canvas,
+.bloc-logo .logo-mask {
+  display: block;
+  width: 140px;
+  height: 49px;
+}
+
+.bloc-logo .logo-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 130px;
+  background-image: url("../img/logo-mask.png");
+  text-indent: -9999px;
+}
+
 #categories-bar {
   border-radius: 50%;
   display: flex;
@@ -34,10 +59,12 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   text-align: right;
 }
+
 .site-footer hr {
   border-top-color: #bbb;
   opacity: 0.5;
 }
+
 .site-footer h6 {
   color: #fff;
   font-size: 16px;
@@ -45,9 +72,11 @@ body {
   margin-top: 5px;
   letter-spacing: 2px;
 }
+
 .site-footer a:hover {
   color: #fff;
 }
+
 .site-footer a {
   width: 40px;
   height: 40px;
