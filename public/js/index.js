@@ -34,6 +34,23 @@ const displayShopSoap = async (event) => {
   event.preventDefault();
 };
 
+var granimInstance = new Granim({
+  element: '#logo-canvas',
+  direction: 'left-right',
+  states : {
+      "default-state": {
+          gradients: [
+              ['#532A09', '#7B4618'],
+              ['#915C27', '#AD8042'],
+              ['#BFAB67', '#BFC882'],
+              ['#A4B75C', '#647332'],
+              ['#3E4c22', '#2E401C']
+          ],
+          transitionSpeed: 5000
+      }
+  }
+});
+
 // Header and footer links
 homeButtonEl.addEventListener("click", displayHomepage);
 shopButtonEl.addEventListener("click", displayShop);
