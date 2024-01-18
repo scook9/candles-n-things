@@ -40,7 +40,7 @@
     <section class="products">
         {{#each products as |product|}}
          <div class="col-md-4">
-            <div id="{{product.id}}" class="card {{product.type}}" style="width: 18rem">
+            <div data-id="{{product.id}}" class="card {{product.type}}" style="width: 18rem">
                <img src="{{product.image}}" class="card-img-top" alt="...">
                <div class="card-body">
                   <p class="card-text">{{product.scent}} - {{product.size}}</p>
@@ -67,4 +67,5 @@
         eyes. Do not ingest. Discontinue use if irritation occurs. For external
         use only. If allergic discontinue use.</p>
     </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./js/shop.js"></script>
