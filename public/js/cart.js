@@ -1,4 +1,8 @@
 
+const { Products } = require("../../models");
+const cartId = require("./shop");
+
+
 // Constructor function for cart items
 function Item(id, price, count) {
     this.scent = id;
