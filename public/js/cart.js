@@ -1,3 +1,4 @@
+
 // Constructor function for cart items
 function Item(id, price, count) {
     this.scent = id;
@@ -22,6 +23,7 @@ function Item(id, price, count) {
       cartContainer.appendChild(cartItem);
     });
   }
+
   
   // Call the renderCartItems function to display the cart items on page load
   renderCartItems();

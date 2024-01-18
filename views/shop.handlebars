@@ -40,12 +40,12 @@
     <section class="products">
         {{#each products as |product|}}
          <div class="col-md-4">
-            <div data-id="{{product.id}}" class="card {{product.type}}" style="width: 18rem">
+            <div  class="card {{product.type}}" style="width: 18rem">
                <img src="{{product.image}}" class="card-img-top" alt="...">
                <div class="card-body">
                   <p class="card-text">{{product.scent}} - {{product.size}}</p>
                   <p>${{product.price}}</p>
-                  <button id="cartAdd" class="btn btn-primary">Add to cart</button>
+                  <button data-id="{{product.id}}" id="cartAdd" class="btn btn-primary">Add to cart</button>
                </div>
             </div>
          </div>
