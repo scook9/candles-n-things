@@ -95,10 +95,8 @@ function clearCart() {
 
 
 
-//need to add   id="add-to-cart-btn"  to the buttons on the cards on the shop page
+//need to add   id="add-to-cart-btn"  to the buttons on the cards on the shop
 document.getElementById("add-to-cart-btn").addEventListener("click", function() {
     myCart.addItemToCart("Product A", 10, 1);
   });
-
-
   
