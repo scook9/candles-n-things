@@ -1,4 +1,5 @@
-// Variable declarations
+// variable declorations
+
 const showAll = document.getElementById("showAll");
 const showCandles = document.getElementById("showCandles");
 const showSoaps = document.getElementById("showSoaps");
@@ -11,28 +12,32 @@ const soapHeader = document.getElementById("soapHeader");
 const scrubHeader = document.getElementById("scrubHeader");
 const candleDisclaimer = document.getElementById("candleDisclaimer");
 const soapDisclaimer = document.getElementById("soapDisclaimer");
-const buttonListEl = document.getElementsByClassName("products");
 
-// Event listener for "Add to cart" button
-buttonListEl.on("click", function (event) {
-  const productId = $(event.target).attr("data-id");
+const displayEl = document.getElementsByClassName("displayCart");
+
+const cartAdd = document.querySelector("#cartAdd");
+
+const buttonListEl = document.querySelector(".products");
+
+let cartId;
+// Event listeners
+
+showAll.addEventListener("click", showAllFunc);
+showCandles.addEventListener("click", showCandlesFunc);
+showSoaps.addEventListener("click", showSoapsFunc);
+showScrubs.addEventListener("click", showScrubsFunc);
+
+buttonListEl.addEventListener("click", function (event) {
+  // get letter from clicked letter button's `data-letter` attribute and use it for display
+  // console.log($(event.target).attr("data-id"));
+  cartId = $(event.target).attr("data-id");
   const productName = $(event.target).attr("data-name");
   const productPrice = $(event.target).attr("data-price");
   addToCart(productId, productName, productPrice);
-});
-
-// Function to add items to the cart and update local storage
-function addToCart(productId, productName, productPrice) {
-  let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-  cartData.push({
-    id: productId,
-    name: productName,
-    price: productPrice
   });
-  localStorage.setItem("cartData", JSON.stringify(cartData));
-}
 
-
+  // console.log(event.target);
+  console.log(cartId);
 
 
 // function to show all products. removes hide class from all descriptions and disclaimers, then removes hide from all products
@@ -123,4 +128,4 @@ function showScrubsFunc() {
   }
 }
 
-// function to
+module.exports = cartId;

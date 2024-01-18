@@ -2,6 +2,7 @@ const shopButtonEl = document.querySelector("#shop-button");
 const homeButtonEl = document.querySelector("#home-button");
 const shopFooterEl = document.querySelector("#shop-footer");
 const shopAllLinkEl = document.querySelector("#shop-all");
+const shopSoapLinkEl = document.querySelector("#shop-soap-link");
 
 const displayHomepage = async (event) => {
   event.preventDefault();
@@ -29,11 +30,15 @@ const displayShop = async (event) => {
   }
 };
 
-//header and footer links
+const displayShopSoap = async (event) => {
+  event.preventDefault();
+};
+
+// Header and footer links
 homeButtonEl.addEventListener("click", displayHomepage);
 shopButtonEl.addEventListener("click", displayShop);
 shopFooterEl.addEventListener("click", displayShop);
 
-//homepage body links
-shopAllLinkEl.addEventListener("click", displayShop);
-shopSoapLinkEl.addEventListener("click", displayShopSoap);
+// Homepage body links
+// shopAllLinkEl.addEventListener("click", displayShop);
+// shopSoapLinkEl.addEventListener("click", displayShopSoap);
