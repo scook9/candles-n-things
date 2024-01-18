@@ -37,11 +37,6 @@ buttonListEl.addEventListener("click", function (event) {
 });
 
 // console.log(event.target);
-console.log(cartId);
-
-  // console.log(event.target);
-  console.log(cartId);
-
 
 // function to show all products. removes hide class from all descriptions and disclaimers, then removes hide from all products
 
@@ -130,5 +125,3 @@ function showScrubsFunc() {
     scrubs[i].classList.remove("hide");
   }
 }
-
-
