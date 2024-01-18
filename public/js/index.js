@@ -1,6 +1,7 @@
 const shopButtonEl = document.querySelector("#shop-button");
 const homeButtonEl = document.querySelector("#home-button");
 const shopFooterEl = document.querySelector("#shop-footer");
+const shopAllLinkEl = document.querySelector("#shop-all");
 
 const displayHomepage = async (event) => {
   event.preventDefault();
@@ -28,6 +29,10 @@ const displayShop = async (event) => {
   }
 };
 
+//header and footer links
 homeButtonEl.addEventListener("click", displayHomepage);
 shopButtonEl.addEventListener("click", displayShop);
 shopFooterEl.addEventListener("click", displayShop);
+
+//homepage body links
+shopAllLinkEl.addEventListener("click", displayShop);
