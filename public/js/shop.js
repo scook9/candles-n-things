@@ -15,8 +15,11 @@ const soapDisclaimer = document.getElementById("soapDisclaimer");
 
 const displayEl = document.getElementsByClassName("displayCart");
 
-const buttonListEl = document.getElementsByClassName("products");
+const cartAdd = document.querySelector("#cartAdd");
 
+const buttonListEl = document.querySelector(".products");
+
+let cartId;
 // Event listeners
 
 showAll.addEventListener("click", showAllFunc);
@@ -24,14 +27,13 @@ showCandles.addEventListener("click", showCandlesFunc);
 showSoaps.addEventListener("click", showSoapsFunc);
 showScrubs.addEventListener("click", showScrubsFunc);
 
-buttonListEl.on("click", function (event) {
-  var displayLetterEl = $("<div>");
-
-  displayLetterEl.addClass("letter");
-
+buttonListEl.addEventListener("click", function (event) {
   // get letter from clicked letter button's `data-letter` attribute and use it for display
-  displayLetterEl.text($(event.target).attr("data-id"));
-  console.log(event);
+  // console.log($(event.target).attr("data-id"));
+  cartId = $(event.target).attr("data-id");
+
+  // console.log(event.target);
+  console.log(cartId);
 });
 
 // function to show all products. removes hide class from all descriptions and disclaimers, then removes hide from all products
@@ -123,3 +125,4 @@ function showScrubsFunc() {
 }
 
 // function to
+module.exports = cartId;
