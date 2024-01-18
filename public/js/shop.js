@@ -124,5 +124,4 @@ function showScrubsFunc() {
   }
 }
 
-// function to
 module.exports = cartId;

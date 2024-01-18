@@ -1,4 +1,5 @@
 const { Products } = require("../../models");
+const cartId = require("./shop");
 
 //need to connect event listener to an "add to cart" button on each card
 const myCart = function () {
