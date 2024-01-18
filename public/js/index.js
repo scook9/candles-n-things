@@ -36,3 +36,4 @@ shopFooterEl.addEventListener("click", displayShop);
 
 //homepage body links
 shopAllLinkEl.addEventListener("click", displayShop);
+shopSoapLinkEl.addEventListener("click", displayShopSoap);
