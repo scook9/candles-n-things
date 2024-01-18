@@ -15,7 +15,7 @@ const soapDisclaimer = document.getElementById("soapDisclaimer");
 
 const displayEl = document.getElementsByClassName("displayCart");
 
-const buttonListEl = document.getElementsByClassName("cartAdd");
+const buttonListEl = document.getElementsByClassName("products");
 
 // Event listeners
 
@@ -24,14 +24,14 @@ showCandles.addEventListener("click", showCandlesFunc);
 showSoaps.addEventListener("click", showSoapsFunc);
 showScrubs.addEventListener("click", showScrubsFunc);
 
-buttonListEl.on("click", ".letter-button", function (event) {
+buttonListEl.on("click", function (event) {
   var displayLetterEl = $("<div>");
 
   displayLetterEl.addClass("letter");
 
   // get letter from clicked letter button's `data-letter` attribute and use it for display
-  displayLetterEl.text($(event.target).attr("data-letter"));
-  displayEl.append(displayLetterEl);
+  displayLetterEl.text($(event.target).attr("data-id"));
+  console.log(event);
 });
 
 // function to show all products. removes hide class from all descriptions and disclaimers, then removes hide from all products
