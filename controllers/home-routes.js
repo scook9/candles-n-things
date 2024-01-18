@@ -38,13 +38,8 @@ router.get("/shop", async (req, res) => {
 //http://localhost:3001/
 router.get("/cart", async (req, res) => {
   try {
-    //need to get array of ids from local storage
-    //pass each id in a for loop to the api GET route by :id
-    //Products.findByPk(:id) and add to array
-    //array.map((productList) => productList.get({ plain: true }))
-    const storedIds = Object.entries(localStorage);
-    console.log(storedIds);
-    res.status(200).render("cart", { cartItems });
+    res.status(200);
+    res.status(200).render("cart");
   } catch (err) {
     res.status(500).json(err);
   }
