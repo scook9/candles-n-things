@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
     const products = dbProductData.map((productList) =>
       productList.get({ plain: true })
     );
-    console.log(products);
+    
 
     res.render("homepage", { layout: "shop", products });
   } catch (err) {

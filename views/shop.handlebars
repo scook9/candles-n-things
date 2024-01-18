@@ -1,10 +1,10 @@
 
     <section>
     <h1>PRODUCTS</h1>
-    <button id="showAll">View all products</button>
-    <button id="showCandles">View all candles</button>
-    <button id="showSoaps">View all soaps</button>
-    <button id="showScrubs">View all salt scrubs</button>
+    <button class="productButton" id="showAll">View all products</button>
+    <button class="productButton" id="showCandles">View all candles</button>
+    <button class="productButton" id="showSoaps">View all soaps</button>
+    <button class="productButton" id="showScrubs">View all salt scrubs</button>
     <section id="candleHeader" class="hide">
       <h2>100% Clean Burning Soy Wax Candles:</h2>
       <p>Indulge the senses with luscious, clean burning candles. These
@@ -37,11 +37,18 @@
       <p>Indulge your senses with luxurious Whipped Pink Himalayan Salt Scrub, a pampering treat that transforms your skincare routine into a spa-like experience. This exquisite scrub is crafted with care, combining the finest pink Himalayan salt crystals, a rich, whipped goat milk that gently exfoliates and a clean non-toxic scent oil, leaving your skin feeling irresistibly smooth, radiant and nourished. Contains whipped goat milk, pink Himalayan salt, coconut oil and scented oil.  Every container of salt scrub is handcrafted and completely free of parabens, phthalates, carcinogens and is non toxic and suitable for all skin types including the most sensitive.</p>
     </section>
     <section class="products">
-      <ul>Available Products
         {{#each products as |product|}}
-          <li class="{{product.type}}">{{product.scent}} - {{product.type}}</li>
-        {{/each}}
-      </ul>
+         <div class="col-md-4">
+            <div class="card {{product.type}}" style="width: 18rem">
+               <img src="{{product.image}}" class="card-img-top" alt="...">
+               <div class="card-body">
+                  <p class="card-text">{{product.scent}} - {{product.size}}</p>
+                  <p>${{product.price}}</p>
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+               </div>
+            </div>
+         </div>
+      {{/each}}
     </section>
     <section id="candleDisclaimer" class="hide">
       <h2>Candle Safety Disclaimer & Care</h2>
