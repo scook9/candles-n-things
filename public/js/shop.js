@@ -1,5 +1,4 @@
-// variable declorations
-
+// Variable declarations
 const showAll = document.getElementById("showAll");
 const showCandles = document.getElementById("showCandles");
 const showSoaps = document.getElementById("showSoaps");
@@ -12,27 +11,29 @@ const soapHeader = document.getElementById("soapHeader");
 const scrubHeader = document.getElementById("scrubHeader");
 const candleDisclaimer = document.getElementById("candleDisclaimer");
 const soapDisclaimer = document.getElementById("soapDisclaimer");
-
-const displayEl = document.getElementsByClassName("displayCart");
-
 const buttonListEl = document.getElementsByClassName("products");
 
-// Event listeners
-
-showAll.addEventListener("click", showAllFunc);
-showCandles.addEventListener("click", showCandlesFunc);
-showSoaps.addEventListener("click", showSoapsFunc);
-showScrubs.addEventListener("click", showScrubsFunc);
-
+// Event listener for "Add to cart" button
 buttonListEl.on("click", function (event) {
-  var displayLetterEl = $("<div>");
-
-  displayLetterEl.addClass("letter");
-
-  // get letter from clicked letter button's `data-letter` attribute and use it for display
-  displayLetterEl.text($(event.target).attr("data-id"));
-  console.log(event);
+  const productId = $(event.target).attr("data-id");
+  const productName = $(event.target).attr("data-name");
+  const productPrice = $(event.target).attr("data-price");
+  addToCart(productId, productName, productPrice);
 });
+
+// Function to add items to the cart and update local storage
+function addToCart(productId, productName, productPrice) {
+  let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+  cartData.push({
+    id: productId,
+    name: productName,
+    price: productPrice
+  });
+  localStorage.setItem("cartData", JSON.stringify(cartData));
+}
+
+
+
 
 // function to show all products. removes hide class from all descriptions and disclaimers, then removes hide from all products
 
