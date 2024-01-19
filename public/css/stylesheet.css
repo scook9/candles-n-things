@@ -12,29 +12,6 @@ body {
   justify-content: center;
 }
 
-.bloc-logo {
-  position: relative;
-  width: 140px;
-  height: 49px;
-  float: left;
-}
-
-.bloc-logo canvas,
-.bloc-logo .logo-mask {
-  display: block;
-  width: 140px;
-  height: 49px;
-}
-
-.bloc-logo .logo-mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-size: 130px;
-  background-image: url("../img/logo-mask.png");
-  text-indent: -9999px;
-}
-
 #categories-bar {
   border-radius: 50%;
   display: flex;
@@ -71,6 +48,7 @@ body {
   text-transform: uppercase;
   margin-top: 5px;
   letter-spacing: 2px;
+  display: block;
 }
 
 .site-footer a:hover {
