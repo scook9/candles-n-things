@@ -1,10 +1,16 @@
-
+{{!-- products page, Generates cards for each product in the database, hiding and showing them based on user input  --}}
     <section>
     <h1>PRODUCTS</h1>
+    {{!-- buttons wich display and hide product cards as well as item descriptions and disclaimers --}}
+    {{!-- show all button, wich hides all headers and footers, removing hide from all of the product cards --}}
     <button class="productButton" id="showAll">View all products</button>
+    {{!-- show candles button, wich hides all soaps, scrubs, and assosiated headers and footers. Displays the candles headers and footers --}}
     <button class="productButton" id="showCandles">View all candles</button>
+    {{!-- show soaps button, wich hides all candles, scrubs, and assosiated headers and footers. Displays the soaps headers and footers --}}
     <button class="productButton" id="showSoaps">View all soaps</button>
+    {{!-- show scrubs button, wich hides all soaps, candles, and assosiated headers and footers. Displays the scrubs header --}}
     <button class="productButton" id="showScrubs">View all salt scrubs</button>
+    {{!-- candle header, hidden by default and shown when show candles button is hit --}}
     <section id="candleHeader" class="hide">
       <h2>100% Clean Burning Soy Wax Candles:</h2>
       <p>Indulge the senses with luscious, clean burning candles. These
@@ -18,6 +24,7 @@
         the relaxation of the body, helping how we feel emotionally and
         physically.</p>
     </section>
+    {{!-- soap header, hidden by default and shown when show soaps button is hit --}}
     <section id="soapHeader" class="hide">
       <h2>Organic Gentle Goat Milk Soaps 2 oz disk:</h2>
       <p>Nourish your skin and indulge your senses with lavish goat milk soap.
@@ -32,10 +39,12 @@
       <p>These beauties are packed with scent. Perfect for travel, gifting,
         treating yourself and everyday use.</p>
     </section>
+    {{!-- scrub header, hidden by default and shown when show scrubs button is hit --}}
     <section id="scrubHeader" class="hide">
       <h2>Whipped Pink Himalayan Salt Body Scrub</h2>
       <p>Indulge your senses with luxurious Whipped Pink Himalayan Salt Scrub, a pampering treat that transforms your skincare routine into a spa-like experience. This exquisite scrub is crafted with care, combining the finest pink Himalayan salt crystals, a rich, whipped goat milk that gently exfoliates and a clean non-toxic scent oil, leaving your skin feeling irresistibly smooth, radiant and nourished. Contains whipped goat milk, pink Himalayan salt, coconut oil and scented oil.  Every container of salt scrub is handcrafted and completely free of parabens, phthalates, carcinogens and is non toxic and suitable for all skin types including the most sensitive.</p>
     </section>
+    {{!-- section to display items, used the #each method to generate a bootstrap card for each item in the database --}}
     <div class="displayCart"></div>
     <section class="products">
         {{#each products as |product|}}
@@ -51,6 +60,7 @@
          </div>
       {{/each}}
     </section>
+    {{!-- candle disclaimer, hidden by default, shown when the show candles button is hit --}}
     <section id="candleDisclaimer" class="hide">
       <h2>Candle Safety Disclaimer & Care</h2>
       <p>Disclaimer: Not intended for children. Never leave a candle burning
@@ -61,6 +71,7 @@
         for any damage that may occur due to misuse of candles, and candle
         burning. Burn for 3-5 hour intervals.</p>
     </section>
+    {{!-- soap disclaimer, hidden by default, displayed when the show soaps button is hit --}}
     <section id="soapDisclaimer" class="hide">
       <h2>Soap Safety Disclaimer</h2>
       <p>Disclaimer: weight may vary slightly from bar to bar. Please avoid

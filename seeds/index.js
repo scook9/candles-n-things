@@ -1,8 +1,9 @@
+// brings in sequelize and the products model
 const sequelize = require("../config/connections");
 const { Products } = require("../models/index");
-
+// brings in the database json file to be organized into a table
 const productsData = require("./productsData.json");
-
+// function to seed the data
 const seedDatabase = async () => {
   try {
     await sequelize.sync({ force: true });
@@ -16,4 +17,7 @@ const seedDatabase = async () => {
     process.exit(1);
   }
 };
+
+// calls to run the seedDatabase function, triggered by "npm run seeds"
+
 seedDatabase();

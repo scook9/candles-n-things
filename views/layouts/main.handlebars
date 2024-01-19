@@ -1,3 +1,5 @@
+{{! main handlebars, the footer and header displayed on every page }}
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -26,11 +28,11 @@
     ></script>
   </head>
   <body>
+    {{! header section, contains nav links to the shop, cart, and homepage }}
 
     <header id="nav">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-
 
           <h1 class="title">STAR RAY DESIGN</h1>
 
@@ -67,8 +69,10 @@
       </nav>
     </header>
 
-    <main id="main">{{{body}}}</main>
+    {{! populates the page from the other .handlebars pages }}
 
+    <main id="main">{{{body}}}</main>
+    {{! footer }}
     <footer class="site-footer">
 
       <div class="container">
