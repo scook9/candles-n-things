@@ -38,17 +38,22 @@ router.get("/shop", async (req, res) => {
 //http://localhost:3001/
 router.get("/cart", async (req, res) => {
   try {
-    //need to get array of ids from local storage
-    //pass each id in a for loop to the api GET route by :id
-    //Products.findByPk(:id) and add to array
-    //array.map((productList) => productList.get({ plain: true }))
-        // Retrieve the cart items from local storage
-        // const cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-        // console.log(cartData);
-        res.status(200).render("cart");
-      } catch (err) {
-        res.status(500).json(err);
-      }
-    });
+    console.log("we're in the cart now");
+
+    res.status(200).render("cart");
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//http://localhost:3001/
+router.get("/cart/:id", async (req, res) => {
+  try {
+    const item = await Products.findByPk(req.params.id);
+    res.json(item);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
