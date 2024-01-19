@@ -2,7 +2,8 @@ const shopButtonEl = document.querySelector("#shop-button");
 const homeButtonEl = document.querySelector("#home-button");
 const shopFooterEl = document.querySelector("#shop-footer");
 const shopAllLinkEl = document.querySelector("#shop-all");
-const shopSoapLinkEl = document.querySelector("#shop-soap-link");
+const cartButtonEl = document.querySelector("#cart-button");
+const cartFooterEl = document.querySelector("#cart-footer");
 
 const displayHomepage = async (event) => {
   event.preventDefault();
@@ -30,8 +31,17 @@ const displayShop = async (event) => {
   }
 };
 
-const displayShopSoap = async (event) => {
+const displayCart = async (event) => {
   event.preventDefault();
+  const response = await fetch("/cart", {
+    method: "GET",
+  });
+  console.log("cart button works");
+  if (response.ok) {
+    document.location.replace("/cart");
+  } else {
+    alert("Shop Page failed to load");
+  }
 };
 
 // var granimInstance = new Granim({
@@ -56,7 +66,5 @@ const displayShopSoap = async (event) => {
 homeButtonEl.addEventListener("click", displayHomepage);
 shopButtonEl.addEventListener("click", displayShop);
 shopFooterEl.addEventListener("click", displayShop);
-
-// Homepage body links
-// shopAllLinkEl.addEventListener("click", displayShop);
-// shopSoapLinkEl.addEventListener("click", displayShopSoap);
+cartButtonEl.addEventListener("click", displayCart);
+cartFooterEl.addEventListener("click", displayCart);

@@ -1,9 +1,12 @@
-<div id="cart-template">
+
   {{!-- bootstrap cards are generated based on the items added to cart --}}
+
+<div id="cart-template cartContainer">
+
   {{#each cartItems as |item|}}
     <div class="col-md-4">
       <div class="card {{item.type}}" style="width: 18rem">
-        <img src="{{item.image}}" class="card-img-top" alt="...">
+        <img src="{{item.image}}" class="card-img-top" alt="..." />
         <div class="card-body">
           <p class="card-text">{{item.scent}} - {{item.size}}</p>
           <p>${{item.price}}</p>
@@ -13,3 +16,4 @@
     </div>
   {{/each}}
 </div>
+<script src="./js/cart.js"></script>
