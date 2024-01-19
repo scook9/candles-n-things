@@ -49,3 +49,5 @@ Ethan Christ - ethanchrist02@gmail.com
 Laura Brown - laura_kessinger@yahoo.com
 
 Erik Edin - ekedin@gmail.com
+
+js cart logic based on (https://dev.to/rajamanickam/add-to-cart-using-javascript-3nom & https://phppot.com/javascript/javascript-shopping-cart/)
