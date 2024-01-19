@@ -1,3 +1,5 @@
+/* general styling */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,12 +14,7 @@ body {
   justify-content: center;
 }
 
-#categories-bar {
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* container for gradum gradient */
 
 #canvas-basic {
   z-index: -1;
@@ -31,12 +28,17 @@ body {
   left: 0;
 }
 
-#footer-list {
-  list-style-type: none;
+/* main.handlebars styling */
+
+#categories-bar {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hide {
-  display: none;
+#footer-list {
+  list-style-type: none;
 }
 
 .site-footer {
@@ -78,6 +80,14 @@ body {
   color: #737373;
 }
 
+/* styling for shop page */
+
+/* hide class to hide items in the shop page */
+
+.hide {
+  display: none;
+}
+
 .products {
   margin-top: 20px;
   display: flex;
@@ -87,7 +97,7 @@ body {
 .productButton {
   margin: 15px;
 }
-
+/* homepage styling */
 #homepage-text {
   margin-top: 150px;
 }
@@ -95,6 +105,8 @@ body {
 #welcome-h5 {
   padding-bottom: 20px;
 }
+
+/* media queries */
 
 @media (max-width: 991px) {
   .site-footer [class^="col-"] {
