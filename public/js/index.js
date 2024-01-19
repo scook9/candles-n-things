@@ -43,24 +43,27 @@ const displayCart = async (event) => {
     alert("Shop Page failed to load");
   }
 };
-
-// var granimInstance = new Granim({
-//   element: "#canvas-basic",
-//   direction: "left-right",
-//   isPausedWhenNotInView: true,
-//   states: {
-//     "default-state": {
-//       gradients: [
-//         ["#fbf8cc", "#fde4cf"],
-//         ["#ffcfd2", "#f1c0e8"],
-//         ["#cfbaf0", "#a3c4f3"],
-//         ["#90dbf4", "#8eecf5"],
-//         ["#98f5e1", "#b9fbc0"],
-//       ],
-//       transitionSpeed: 7000,
-//     },
-//   },
-// });
+document.addEventListener('DOMContentLoaded', function() {
+  // Your code to run when the DOM content is loaded
+  var granimInstance = new Granim({
+  element: "#canvas-basic",
+  direction: "left-right",
+  isPausedWhenNotInView: true,
+  states: {
+    "default-state": {
+      gradients: [
+        ["#fbf8cc", "#fde4cf"],
+        ["#ffcfd2", "#f1c0e8"],
+        ["#cfbaf0", "#a3c4f3"],
+        ["#90dbf4", "#8eecf5"],
+        ["#98f5e1", "#b9fbc0"],
+      ],
+      transitionSpeed: 7000,
+    },
+  },
+});
+  // Add your event handling logic here
+});
 
 // Header and footer links
 homeButtonEl.addEventListener("click", displayHomepage);
