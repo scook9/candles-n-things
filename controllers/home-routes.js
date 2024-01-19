@@ -42,12 +42,13 @@ router.get("/cart", async (req, res) => {
     //pass each id in a for loop to the api GET route by :id
     //Products.findByPk(:id) and add to array
     //array.map((productList) => productList.get({ plain: true }))
-    const storedIds = Object.entries(localStorage);
-    console.log(storedIds);
-    res.status(200).render("cart", { cartItems });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+        // Retrieve the cart items from local storage
+        // const cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+        // console.log(cartData);
+        res.status(200).render("cart");
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    });
 
 module.exports = router;
